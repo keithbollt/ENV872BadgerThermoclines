@@ -6,12 +6,23 @@ output:
     number_sections: yes
 geometry: margin=2.54cm
 title: "Are the Thermoclines on Wisconsin Lakes Moving Deeper?"
-subtitle: Web address for GitHub repository
+subtitle: https://github.com/keithbollt/ENV872BadgerThermoclines.git
 author: Keith Bollt
 abstract: "For this project, I was interested in determining if thermoclines in five Wisconsin lakes are trending deeper over time, possibly due to climate change. I looked at physical and chemical data from the NTLR dataset, specifically temperature and dissolved oxygen levels at 7 meters depth between June 20 and September 21 from every year data was available between 1984 and 2016. Initial data visualization did not promise significant trends that would point to climate change. I ran four total tests on the dataset: a repeated measures ANOVA on the combined dataset for both variables, and a seasonal Mann Kendall on each of the five lakes for both variables. I found that there was not a significant trend in temperature or oxygen on the five lakes as a whole, and that no individual lake exhibited both a significant increase in temperature and a significant decrease in dissolved oxygen at 7 meters depth. In my conclusion, I  discuss that for incremental climate change, the thermocline may not move because it is a result of a lake's relative physical conditions. Further tests would likely reveal that the thermocline is steeper."
 fontsize: 12pt
 ---
-
+Steps to turning this thing in:
+-Turn off warning messages at the top of the document
+-Run the models but don't include the results in the code
+-Make sure code doesnt run off page- go to the text on the pdf and press enter in the rmd
+-Create tables that summarize the results of the models (probably 3: 2 for smk tests, temp and oxygen)
+-Move the temperature of all lakes plot to the ANOVA result section
+-Make an identical plot for oxygen
+-Number all the tables and plots
+-Add the template elements from the project template rmd
+-knit 
+-knit readme file, too
+-turn in both files
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -155,7 +166,7 @@ Centrallonglake_processed <- Centrallonglake_raw %>%
   mutate(Week = week(sampledate)) %>%
   na.exclude()  
 dim(Centrallonglake_processed) 
-#There are 0 data points taken on Central Long Lake below 4 meters. Unfortunately, I am going to have to eliminate Central Long Lake from my analysis.
+#There are 0 data points taken on Central Long Lake below 4 meters. 
 
 Hummingbirdlake_processed <- Hummingbirdlake_raw %>%
   filter(depth == 7, daynum %in% 172:264)%>%
@@ -163,7 +174,7 @@ Hummingbirdlake_processed <- Hummingbirdlake_raw %>%
   mutate(Week = week(sampledate)) %>%
   na.exclude()  
 dim(Hummingbirdlake_processed) 
-#Hummingbird lake only has one datapoint at 7 meters. Unfortunately, I am going to have to eliminate Hummingbird Lake from my analysis.
+#Hummingbird lake only has one datapoint at 7 meters. 
 
 Cramptonlake_processed <- Cramptonlake_raw %>%
   filter(depth == 7, daynum %in% 172:264)%>%
@@ -179,7 +190,7 @@ Wardlake_processed <- Wardlake_raw %>%
   mutate(Week = week(sampledate)) %>%
   na.exclude() 
 dim(Wardlake_processed) 
-#Ward lake only has 11 datapoints at 7 meters. Unfortunately, I am going to have to eliminate Ward Lake from my analysis.
+#Ward lake only has 11 datapoints at 7 meters. 
 ```
 
 After deciding on what question I wanted to answer and what data I wanted to use to answer my question, I unfortunately had to eliminate four lakes from my analysis. I still have five lakes to perform my analysis on. I also combined my five processed datasets into one dataframe for part of my statistical analysis. My first series of statistical tests will look at the combined dataset and my second series of statistical tests will look at each lake individually.

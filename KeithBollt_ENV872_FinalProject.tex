@@ -118,7 +118,7 @@
   \title{Are the Thermoclines on Wisconsin Lakes Moving Deeper?}
     \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
-  \subtitle{Web address for GitHub repository}
+  \subtitle{\url{https://github.com/keithbollt/ENV872BadgerThermoclines.git}}
   \author{Keith Bollt}
     \preauthor{\centering\large\emph}
   \postauthor{\par}
@@ -635,7 +635,7 @@ datapoints to perform statistical analysis on.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{#There are 0 data points taken on Central Long Lake below 4 meters. Unfortunately, I am going to have to eliminate Central Long Lake from my analysis.}
+\CommentTok{#There are 0 data points taken on Central Long Lake below 4 meters. }
 
 \NormalTok{Hummingbirdlake_processed <-}\StringTok{ }\NormalTok{Hummingbirdlake_raw }\OperatorTok{%>%}
 \StringTok{  }\KeywordTok{filter}\NormalTok{(depth }\OperatorTok{==}\StringTok{ }\DecValTok{7}\NormalTok{, daynum }\OperatorTok{%in%}\StringTok{ }\DecValTok{172}\OperatorTok{:}\DecValTok{264}\NormalTok{)}\OperatorTok{%>%}
@@ -652,7 +652,7 @@ datapoints to perform statistical analysis on.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{#Hummingbird lake only has one datapoint at 7 meters. Unfortunately, I am going to have to eliminate Hummingbird Lake from my analysis.}
+\CommentTok{#Hummingbird lake only has one datapoint at 7 meters. }
 
 \NormalTok{Cramptonlake_processed <-}\StringTok{ }\NormalTok{Cramptonlake_raw }\OperatorTok{%>%}
 \StringTok{  }\KeywordTok{filter}\NormalTok{(depth }\OperatorTok{==}\StringTok{ }\DecValTok{7}\NormalTok{, daynum }\OperatorTok{%in%}\StringTok{ }\DecValTok{172}\OperatorTok{:}\DecValTok{264}\NormalTok{)}\OperatorTok{%>%}
@@ -686,7 +686,7 @@ datapoints to perform statistical analysis on.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{#Ward lake only has 11 datapoints at 7 meters. Unfortunately, I am going to have to eliminate Ward Lake from my analysis.}
+\CommentTok{#Ward lake only has 11 datapoints at 7 meters. }
 \end{Highlighting}
 \end{Shaded}
 
