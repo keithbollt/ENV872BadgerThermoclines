@@ -22,8 +22,6 @@ Data was accessed on December 6, 2018.
 
 ### Physical and chemical limnology
 
-The following information on the data was prepared by Professor Salk:
-
 The data is measured at a station in the middle of each of the nine lakes. Generally, the data was collected in the morning. The data is taken at increments, and most data is taken at or below ten meters depth. The temporal resolution varies across lakes. Some lakes only have a few years of data, while others have ample data from most or all years. The data was taken during periods of no ice on the lake. This means that there is little data during the winter months. While there are several different measurements taken at these lakes, the two variables that the thermocline study focuses on are dissolved oxygen and temperature.
 
 Data collection techniques used during the period 1984-1990 were described by Carpenter and Kitchell (1993) and data collection techniques for 1991-1997 were described by Carpenter et al. (2001).
